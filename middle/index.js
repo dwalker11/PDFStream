@@ -24,10 +24,10 @@ const fetchPdf = () => {
         .then((res) => {
             console.log(res) // res.data === Buffer.from(res.data) when 'responseType' is arraybuffer
 
-            const decoded = res.data
-            reader.parseBuffer(decoded, defaultCallback)
+            const { data } = res
+            reader.parseBuffer(data, defaultCallback)
 
-            fs.writeFile("./pdf/test.pdf", decoded, (err) => {
+            fs.writeFile("./pdf/test.pdf", data, (err) => {
                 if (err) console.error(err)
             })
         });
