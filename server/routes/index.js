@@ -16,4 +16,12 @@ router.get('/test', (req, res, next) => {
   });
 });
 
+router.get('/encoded', (req, res, next) => {
+  const file = path.resolve(__dirname, '..', 'public', 'pdf', 'Obesity.pdf');
+  fs.readFile(file, 'base64', (err, data) => {
+    if (err) throw new Error(err);
+    res.send(data);
+  });
+});
+
 module.exports = router;
