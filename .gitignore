@@ -1,2 +1,4 @@
-
-headers
+.parcel-cache
+dist
+node_modules
+headers*
