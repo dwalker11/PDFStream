@@ -4,7 +4,7 @@ A test repository to send and receive binary data
 
 Notiable files include:
 
-/middle.js
+/middle/index.js
 
 /client/src/App.js
 
